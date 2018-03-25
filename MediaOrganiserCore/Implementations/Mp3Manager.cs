@@ -7,7 +7,7 @@ namespace MediaOrganiserCore.Implementations
 {
 	public class Mp3Manager : Imp3Manager
     {
-        public Mp3Manager()
+		public Mp3Manager()
         {
         }
 

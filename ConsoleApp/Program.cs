@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using MediaOrganiserCore;
 using MediaOrganiserCore.Implementations;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 
 namespace ConsoleApp
 {
@@ -10,6 +12,25 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
+			// Configure DI
+            var serviceProvider = new ServiceCollection()
+                .AddLogging()
+                .AddSingleton<Imp3Manager, Mp3Manager>()
+                .BuildServiceProvider();
+
+            // Configure console logging
+            serviceProvider
+                .GetService<ILoggerFactory>()
+                .AddConsole(LogLevel.Debug);
+
+            var logger = serviceProvider.GetService<ILoggerFactory>()
+                .CreateLogger<Program>();
+            logger.LogDebug("Starting application");
+
+            // Configure Mp3 Manager
+			logger.LogDebug("Configuring MP3 manager");
+			var mp3Manager = serviceProvider.GetService<Imp3Manager>();
+
 			List<string> lsArtists = new List<string>();
             List<string> lsInvalidArtistFiles = new List<string>();
 
@@ -25,13 +46,12 @@ namespace ConsoleApp
             }
             else
             {
-                Imp3Manager mgr = new Mp3Manager();
-                var mp3s = mgr.GetAllMp3s(rootFolder, true);
+				var mp3s = mp3Manager.GetAllMp3s(rootFolder, true);
 				Console.WriteLine("{0} MP3s found.", mp3s.Count);
 				Console.WriteLine();
                 foreach(var mp3 in mp3s)
 				{
-					Console.WriteLine(mgr.CleanMp3(mp3));
+					Console.WriteLine(mp3Manager.CleanMp3(mp3));
 				}
             }
 
