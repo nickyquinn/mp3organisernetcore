@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Implementations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="taglib" Version="2.1.0" />
+  </ItemGroup>
+</Project>

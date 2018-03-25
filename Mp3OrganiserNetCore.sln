@@ -1,6 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mp3OrganiserNetCore", "Mp3OrganiserNetCore\Mp3OrganiserNetCore.csproj", "{CC8AD753-6A09-4D28-B4B2-8D0F3A57EA02}"
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaOrganiserCore", "MediaOrganiserCore\MediaOrganiserCore.csproj", "{A5AC337E-D2FC-417C-B029-C131C787E7C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{33D87626-8658-4AF7-8AFD-BA6DACC01DB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +11,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CC8AD753-6A09-4D28-B4B2-8D0F3A57EA02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CC8AD753-6A09-4D28-B4B2-8D0F3A57EA02}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CC8AD753-6A09-4D28-B4B2-8D0F3A57EA02}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CC8AD753-6A09-4D28-B4B2-8D0F3A57EA02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5AC337E-D2FC-417C-B029-C131C787E7C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5AC337E-D2FC-417C-B029-C131C787E7C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5AC337E-D2FC-417C-B029-C131C787E7C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5AC337E-D2FC-417C-B029-C131C787E7C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33D87626-8658-4AF7-8AFD-BA6DACC01DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33D87626-8658-4AF7-8AFD-BA6DACC01DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33D87626-8658-4AF7-8AFD-BA6DACC01DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33D87626-8658-4AF7-8AFD-BA6DACC01DB8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.StandardHeader = $2
+		$0.VersionControlPolicy = $3
 	EndGlobalSection
 EndGlobal
