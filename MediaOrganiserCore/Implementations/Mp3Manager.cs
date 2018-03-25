@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Threading.Tasks;
 
 namespace MediaOrganiserCore.Implementations
 {
@@ -25,7 +24,7 @@ namespace MediaOrganiserCore.Implementations
 			{
 				fileToEdit = TagLib.File.Create(filePath);
 			}
-            catch(Exception ex)
+            catch(Exception)
 			{
 				return filePath + " - ERR: NOT VALID MP3";
 			}
